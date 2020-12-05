@@ -50,10 +50,10 @@ export default class App extends Component {
 		return (
 			<div className="container">
 				<Helmet>
-					<title>Graphbook - Feed</title>
+					<title>AnChatApp - Feed</title>
 					<meta
 						name="description"
-						content="Newsfeed of all your friends on Graphbook"
+						content="Newsfeed of all your friends on AnChatApp"
 					/>
 				</Helmet>
 				<div className="postForm">
