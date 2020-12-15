@@ -12,6 +12,11 @@ const sequelize = new Sequelize(
 	config
 );
 
+sequelize
+	.authenticate()
+	.then(() => console.log("Data connected..."))
+	.catch((err) => console.log("EEEEEE " + err));
+
 const db = {
 	// models: models(sequelize),
 	sequelize,
