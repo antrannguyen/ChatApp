@@ -1,28 +1,21 @@
-import logger from "../../helpers/logger";
+// const { User } = require("../models");
 
-export default function resolver() {
-	const { db } = this;
-	const { Post } = db.models;
-
-	const resolvers = {
-		RootQuery: {
-			posts(root, args, context) {
-				return Post.findAll({ order: [["createdAt", "DESC"]] });
-			},
-		},
-		// RootMutation: {
-		// 	addPost(root, { post, user }, context) {
-		// 		let postObject = {
-		// 			...post,
-		// 			user,
-		// 			id: posts.length + 1,
-		// 		};
-		// 		posts.push(postObject);
-		// 		logger.log({ level: "info", message: "Post was created" });
-		// 		return postObject;
-		// 	},
+module.exports = {
+	Query: {
+		// getUsers: async () => {
+		// 	try {
+		// 		const users = await User.findAll();
+		// 		return users;
+		// 	} catch (err) {
+		// 		console.log(err);
+		// 	}
 		// },
-	};
-
-	return resolvers;
-}
+		getUsers: () => {
+			const users = [
+				{ username: "an", email: "an@an" },
+				{ username: "an", email: "an@an" },
+			];
+			return users;
+		},
+	},
+};

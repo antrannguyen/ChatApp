@@ -1,4 +1,5 @@
-node_modules
+node_modules/
 .eslintrc
 package.json
 package-lock.jsongit add .
+congif/

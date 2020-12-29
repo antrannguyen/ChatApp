@@ -1,0 +1,9 @@
+{
+	"development": {
+		"username": "an",
+		"password": "password",
+		"database": "chatapp",
+		"host": "localhost",
+		"dialect": "mysql"
+	}
+}
