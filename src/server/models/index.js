@@ -1,4 +1,6 @@
 import Sequelize from "sequelize";
+// import R from "babel-plugin-require-context-hook";
+// const RR = R();
 if (process.env.NODE_ENV === "development") {
 	require("babel-plugin-require-context-hook/register")();
 }
@@ -6,12 +8,7 @@ if (process.env.NODE_ENV === "development") {
 export default (sequelize) => {
 	let db = {};
 
-	const context = require.context(
-		".",
-		true,
-		/^\.\/(?!index\.js).*\.js$/,
-		"sync"
-	);
+	const context = require.context(".", true, /\.js$/, "sync");
 	context
 		.keys()
 		.map(context)
