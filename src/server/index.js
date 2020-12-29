@@ -1,9 +1,9 @@
-import express from "express";
-import path from "path";
-import helmet from "helmet";
-import cors from "cors";
-import compress from "compression";
-import servicesLoader from "./services";
+const express = require("express");
+const path = require("path");
+const helmet = require("helmet");
+const cors = require("cors");
+const compress = require("compression");
+const servicesLoader = require("./services");
 import db from "./database";
 const utils = {
 	db,
